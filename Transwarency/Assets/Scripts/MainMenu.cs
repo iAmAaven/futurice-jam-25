@@ -1,16 +1,34 @@
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public AudioMixer audioMixer;
+
+
+    public void StartGame(string sceneName)
     {
-        
+        SceneManager.LoadScene(sceneName);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void QuitGame()
     {
-        
+        Application.Quit();
+    }
+
+    public void SetMasterVolume(float volume)
+    {
+        audioMixer.SetFloat("MasterVolume", Mathf.Log10(volume) * 20);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        audioMixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        audioMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
     }
 }
