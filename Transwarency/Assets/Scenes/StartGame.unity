@@ -703,8 +703,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   maxHealth: 3
-  currentLevel: 1
+  currentLevel: 0
+  currentRound: 1
   isStartScene: 1
+  speedMultiplier: 1
+  isHyperSpeed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

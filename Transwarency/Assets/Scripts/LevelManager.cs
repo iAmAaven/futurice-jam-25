@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -17,6 +18,9 @@ public class LevelManager : MonoBehaviour
     {
         if (LevelChooser.instance == null)
             Instantiate(levelChooserPrefab);
+
+        FindFirstObjectByType<HealthBar>().RefreshHealth(LevelChooser.instance.health);
+        GameObject.FindWithTag("LevelText").GetComponent<TextMeshProUGUI>().text = "" + LevelChooser.instance.currentLevel;
     }
 
     public void LevelCompleted()
@@ -43,10 +47,10 @@ public class LevelManager : MonoBehaviour
             levelFinishAudio.clip = failAudio;
             levelFinishAudio.Play();
         }
-        if (anim != null)
-            anim.SetTrigger("LevelFailed");
+        // if (anim != null)
+        //     anim.SetTrigger("LevelFailed");
 
-        // LevelChooser.instance.health--;
+        // LevelChooser.instance.LoseHealth();
         LevelChooser.instance.ChooseLevel();
     }
 }
