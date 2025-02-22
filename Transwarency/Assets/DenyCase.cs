@@ -1,0 +1,48 @@
+using UnityEngine;
+
+public class DenyCase : MonoBehaviour
+{
+    public XRayVision xrayVision;
+    private bool isMouseOver = false, isCorrectAnswer = false;
+    private LevelManager levelManager;
+    private LevelLength levelLength;
+    void Start()
+    {
+        levelManager = FindFirstObjectByType<LevelManager>();
+        levelLength = FindFirstObjectByType<LevelLength>();
+    }
+    void Update()
+    {
+        if (levelManager.levelCompleted || levelManager.levelFailed || levelLength.levelStarted == false)
+            return;
+
+        if (xrayVision.isSafe)
+            isCorrectAnswer = false;
+        else
+            isCorrectAnswer = true;
+
+        if (Input.GetMouseButtonDown(0) && isMouseOver)
+        {
+            if (isCorrectAnswer)
+            {
+                Debug.Log("Correct Answer!");
+                xrayVision.RandomizeCase();
+            }
+            else
+            {
+                Debug.Log("Level Failed");
+                levelManager.LevelFailed();
+            }
+        }
+    }
+    void OnMouseOver()
+    {
+        isMouseOver = true;
+        GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 0.5f);
+    }
+    void OnMouseExit()
+    {
+        isMouseOver = false;
+        GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
+    }
+}

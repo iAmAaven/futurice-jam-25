@@ -5,14 +5,19 @@ public class TransObject : MonoBehaviour
     public bool isFading = false;
     private bool isMouseOver = false;
     private LevelManager levelManager;
+    private LevelLength levelLength;
 
     void Start()
     {
         levelManager = FindFirstObjectByType<LevelManager>();
+        levelLength = FindFirstObjectByType<LevelLength>();
     }
 
     void Update()
     {
+        if (levelManager.levelCompleted || levelManager.levelFailed || levelLength.levelStarted == false)
+            return;
+
         if (Input.GetMouseButtonDown(0) && isMouseOver)
         {
             if (isFading)

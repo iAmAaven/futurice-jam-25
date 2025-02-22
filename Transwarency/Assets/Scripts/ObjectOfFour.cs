@@ -29,7 +29,7 @@ public class ObjectOfFour : MonoBehaviour
 
     IEnumerator FadeOut()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         levelLength = FindFirstObjectByType<LevelLength>();
         SpriteRenderer spriteRenderer = fadingObject.GetComponentInChildren<SpriteRenderer>();
 
@@ -39,12 +39,17 @@ public class ObjectOfFour : MonoBehaviour
 
         while (elapsedTime < duration)
         {
+            if (spriteRenderer == null)
+                break;
+
             elapsedTime += Time.deltaTime;
             color.a = Mathf.Lerp(1f, 0f, elapsedTime / duration);
             spriteRenderer.color = color;
             yield return null;
         }
 
+        if (spriteRenderer == null)
+            yield break;
         color.a = 0f;
         spriteRenderer.color = color;
     }
