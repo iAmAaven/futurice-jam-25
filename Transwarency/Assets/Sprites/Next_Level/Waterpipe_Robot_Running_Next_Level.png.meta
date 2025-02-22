@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0c9c9d6dfab350b479abd3ab626f737c
+guid: a2f1259dad7a29642819712dd9a59b8e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8731740588277093861
-    second: Office_Main_Menu_Ware_0
+      213: 5331814266231218623
+    second: Waterpipe_Robot_Running_Next_Level_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Office_Main_Menu_Ware_0
+      name: Waterpipe_Robot_Running_Next_Level_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 119
+        width: 256
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e5dd136dcf5d2970800000000000000
-      internalID: 8731740588277093861
+      spriteID: fb1621373d86ef940800000000000000
+      internalID: 5331814266231218623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waterpipe_Robot_Running_Next_Level_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b508300ecc8fe2448a654216ba4f44c1
+      internalID: 28604472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Waterpipe_Robot_Running_Next_Level_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1609ba02d3ba2c242bf381e344197158
+      internalID: -1422549890
       vertices: []
       indices: 
       edges: []
@@ -138,7 +182,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 83c1210ba52759a40b9c1ce96843a481
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +192,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Office_Main_Menu_Ware_0: 8731740588277093861
+      Waterpipe_Robot_Running_Next_Level_0: 5331814266231218623
+      Waterpipe_Robot_Running_Next_Level_1: 28604472
+      Waterpipe_Robot_Running_Next_Level_2: -1422549890
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
