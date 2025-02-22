@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0c9c9d6dfab350b479abd3ab626f737c
+guid: ab0b8bf9b61e4814e803bdefa2e74f04
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8731740588277093861
-    second: Office_Main_Menu_Ware_0
+      213: -4110509943482331637
+    second: Diploma_Therapy_Level_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,10 +72,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Office_Main_Menu_Ware_0
+      name: Diploma_Therapy_Level_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 119
+        width: 39
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e5dd136dcf5d2970800000000000000
-      internalID: 8731740588277093861
+      spriteID: b0e460d1cf884f6c0800000000000000
+      internalID: -4110509943482331637
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Office_Main_Menu_Ware_0: 8731740588277093861
+      Diploma_Therapy_Level_0: -4110509943482331637
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

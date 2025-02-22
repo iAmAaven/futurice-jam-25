@@ -7,6 +7,8 @@ TagManager:
   - Intro
   - LevelText
   - Balloon
+  - Goal
+  - Wall
   layers:
   - Default
   - TransparentFX
