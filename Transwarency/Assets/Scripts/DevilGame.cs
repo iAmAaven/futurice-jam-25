@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class DevilGame : MonoBehaviour
 {
+    public Animator[] paperAnims;
     public int questionAmount = 3;
     public GameObject accept, deny;
     public TextMeshProUGUI questionText;
     public string[] badTexts, goodTexts;
     public SpriteRenderer politicianGFX, tableGFX, windowGFX;
-    public Sprite goodSprite, devilSprite, goodTable, badTable, goodWindow, badWindow;
+    public Sprite[] goodSprites;
+    public Sprite devilSprite, goodTable, badTable, goodWindow, badWindow;
     public bool isGood = false;
 
     void Start()
@@ -18,6 +20,14 @@ public class DevilGame : MonoBehaviour
 
     public void RandomizeAnswer()
     {
+        if (questionAmount < 3)
+        {
+            if (isGood)
+                paperAnims[questionAmount].SetTrigger("Good");
+            else
+                paperAnims[questionAmount].SetTrigger("Bad");
+        }
+
         if (questionAmount <= 0)
         {
             FindFirstObjectByType<LevelManager>().LevelCompleted();
@@ -31,7 +41,7 @@ public class DevilGame : MonoBehaviour
 
         if (isGood)
         {
-            politicianGFX.sprite = goodSprite;
+            politicianGFX.sprite = goodSprites[Random.Range(0, goodSprites.Length)];
             tableGFX.sprite = goodTable;
             windowGFX.sprite = goodWindow;
             questionText.text = goodTexts[Random.Range(0, goodTexts.Length)];

@@ -7,6 +7,7 @@ public class GrabJonathan : MonoBehaviour
     private bool isHovering = false;
     private bool jonathanGrabbed = false, levelCompleted = false;
     private LevelLength levelLength;
+    private LevelManager levelManager;
 
     void Start()
     {
@@ -30,7 +31,9 @@ public class GrabJonathan : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (levelCompleted == true)
+        if (levelCompleted == true
+            || levelManager.levelFailed
+            || levelManager.levelCompleted)
             return;
 
         if (other.gameObject.tag == "Goal")

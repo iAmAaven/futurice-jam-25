@@ -41,7 +41,7 @@ AudioSource:
   m_GameObject: {fileID: 2821048473923286381}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5093337918700020656, guid: 9abe1173e4f491f4d91827557a7fd186, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -176,8 +176,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   levelFinishAudio: {fileID: 7889146812780216421}
-  failAudio: {fileID: 8300000, guid: cab97921be0cba841a01fd01035ac74c, type: 3}
-  successAudio: {fileID: 8300000, guid: b2f43b2bb55f4c9478f4d8f53af89eba, type: 3}
+  failAudios:
+  - {fileID: 8300000, guid: ff42fb9ba7d1ad54e8a304a3f54495bc, type: 3}
+  - {fileID: 8300000, guid: 676dbf70fe0d17e4d83697a5de565413, type: 3}
+  - {fileID: 8300000, guid: b52a27953bdb72f4d87f1b991a3f419b, type: 3}
+  - {fileID: 8300000, guid: 7a6d2c58b49c71a42bc9c53397221d1e, type: 3}
+  - {fileID: 8300000, guid: 9ea4c93a9d8ec24469f5ddff96242b68, type: 3}
+  - {fileID: 8300000, guid: 0356a9cda4e94f846ab632c40cc1fee8, type: 3}
+  successAudios:
+  - {fileID: 8300000, guid: 91b14e802aec6ed4ca22c618d8945e10, type: 3}
+  - {fileID: 8300000, guid: 861e8c62d859b204eab933b29d1bf4e7, type: 3}
+  - {fileID: 8300000, guid: b09b8d46b17b03043b2dca796c90535a, type: 3}
+  - {fileID: 8300000, guid: c32f6b334136d834ebcef8fb3ee6e78f, type: 3}
+  - {fileID: 8300000, guid: 1b17c3c7f3d1c8e43b52193ff9317f87, type: 3}
+  - {fileID: 8300000, guid: a62a784e9e00d4d4f84437ddf57cacb1, type: 3}
   levelChooserPrefab: {fileID: 3312138972440088196, guid: 5f9b0706fa3ef714f971ec195e84d151, type: 3}
   levelCompleted: 0
   levelFailed: 0
