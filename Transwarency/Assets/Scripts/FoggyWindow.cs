@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class FoggyWindow : MonoBehaviour
 {
+    public GameObject sponge;
     public SpriteRenderer dirtyWindow;
     private bool isHovering = false;
     private Rigidbody2D player;
@@ -15,18 +16,22 @@ public class FoggyWindow : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = false;
         player = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
         levelLength = FindFirstObjectByType<LevelLength>();
         levelManager = FindFirstObjectByType<LevelManager>();
     }
     void Update()
     {
-        if (windowScrubbed || levelLength.levelStarted == false)
+        if (windowScrubbed || levelLength.levelStarted == false
+            || levelManager.levelCompleted || levelManager.levelFailed)
             return;
 
         if (dirtyWindow.color.a <= 0f)
         {
             Debug.Log("Win!");
+            Cursor.visible = true;
+            Destroy(sponge);
             levelManager.LevelCompleted();
             windowScrubbed = true;
             return;

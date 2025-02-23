@@ -37,6 +37,7 @@ public class LevelChooser : MonoBehaviour
         if (currentLevel > 0 && currentLevel % 5 == 0)
         {
             speedMultiplier += 0.2f;
+            Debug.Log("Increasing speed to " + speedMultiplier);
             Time.timeScale = speedMultiplier;
         }
 

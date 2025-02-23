@@ -7,15 +7,18 @@ public class BalloonGame : MonoBehaviour
     private bool isMouseOver = false;
     private GameObject balloon;
     private LevelLength levelLength;
+    private LevelManager levelManager;
 
     void Start()
     {
         levelLength = FindFirstObjectByType<LevelLength>();
+        levelManager = FindFirstObjectByType<LevelManager>();
     }
 
     void Update()
     {
-        if (allPopped || levelLength.levelStarted == false)
+        if (allPopped || levelLength.levelStarted == false
+            || levelManager.levelCompleted || levelManager.levelFailed)
             return;
 
         if (Input.GetMouseButtonDown(0) && isMouseOver)
