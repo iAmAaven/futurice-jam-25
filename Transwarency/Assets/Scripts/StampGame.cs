@@ -5,12 +5,13 @@ public class StampGame : MonoBehaviour
     public int paperAmount = 10;
     public Animator stampAnim;
     public Animator[] paperAnims;
-    private bool levelCompleted = false;
+    private LevelManager levelManager;
     private LevelLength levelLength;
 
     void Start()
     {
         levelLength = FindFirstObjectByType<LevelLength>();
+        levelManager = FindFirstObjectByType<LevelManager>();
     }
 
     public void Stamp()
@@ -23,12 +24,13 @@ public class StampGame : MonoBehaviour
 
     void Update()
     {
-        if (levelLength.levelStarted == false || levelCompleted)
+        if (levelLength.levelStarted == false
+            || levelManager.levelFailed == true
+            || levelManager.levelCompleted == true)
             return;
 
         if (paperAmount <= 0)
         {
-            levelCompleted = true;
             FindFirstObjectByType<LevelManager>().LevelCompleted();
             return;
         }

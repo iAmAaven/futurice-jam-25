@@ -50,7 +50,7 @@ public class LevelManager : MonoBehaviour
         // if (anim != null)
         //     anim.SetTrigger("LevelFailed");
 
-        // LevelChooser.instance.LoseHealth();
+        LevelChooser.instance.LoseHealth();
         LevelChooser.instance.ChooseLevel();
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0c9c9d6dfab350b479abd3ab626f737c
+guid: 10eba7a24e1363d46b5504d5a0ee0c10
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8731740588277093861
-    second: Office_Main_Menu_Ware_0
+      213: 835186369549237008
+    second: Next_Level_Background_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Office_Main_Menu_Ware_0
+      name: Next_Level_Background_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 119
+        width: 256
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e5dd136dcf5d2970800000000000000
-      internalID: 8731740588277093861
+      spriteID: 01bfa3ef39d279b00800000000000000
+      internalID: 835186369549237008
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Office_Main_Menu_Ware_0: 8731740588277093861
+      Next_Level_Background_0: 835186369549237008
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
