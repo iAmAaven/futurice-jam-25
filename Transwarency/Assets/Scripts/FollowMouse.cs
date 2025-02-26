@@ -20,5 +20,6 @@ public class FollowMouse : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(direction.x * speed, direction.y * speed);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 }

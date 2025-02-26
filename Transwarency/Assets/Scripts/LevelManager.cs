@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class LevelManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class LevelManager : MonoBehaviour
     public AudioClip[] failAudios, successAudios;
     [Header("References")]
     public GameObject levelChooserPrefab;
+    public AudioMixer audioMixer;
 
     [HideInInspector]
     public bool levelCompleted = false, levelFailed = false;

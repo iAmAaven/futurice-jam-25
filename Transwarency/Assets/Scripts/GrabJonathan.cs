@@ -12,6 +12,7 @@ public class GrabJonathan : MonoBehaviour
     void Start()
     {
         levelLength = FindFirstObjectByType<LevelLength>();
+        levelManager = FindFirstObjectByType<LevelManager>();
         followMouse.enabled = false;
     }
 
